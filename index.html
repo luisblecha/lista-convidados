@@ -1,17 +1,26 @@
 <html>
-    <head>
-        <title>Lista de Convidados</title>
-        <meta charset="utf-8">
-        <script src="script.js"></script>
-    </head>
-    <body>
+
+<head>
+    <title>Lista de Convidados</title>
+    <meta charset="utf-8">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <div class="dados">
         <h1>Lista de Convidados</h1>
-        <form>
+        <form class="form">
             <input id="nome" type="text" placeholder="Nome do convidado">
-            <input id="idade" type="number" placeholder="Idade" >
-            <input id="email" type="email" placeholder="E-mail" >
-            <button type="button" onclick="adicionar()">Adicionar</button>
+            <input id="idade" type="number" placeholder="Idade">
+            <input id="email" type="email" placeholder="E-mail">
+
         </form>
-        <section id="lista"></section>
-    </body>
-</html> 
+        <div class="button">
+            <button type="button" onclick="adicionar()">Adicionar</button>
+        </div>
+    </div>
+    <section id="lista"></section>
+</body>
+
+</html>
