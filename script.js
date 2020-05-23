@@ -19,9 +19,11 @@ function atualizarLista() {
     // adiciona os elementos
     for(i = 0; i < convidados.length; i++) { // i = 0 1 2
         lista.innerHTML += `
-        <div> 
-            <span>${convidados[i].nome}</span> 
-        </div>`
+        <tr> 
+            <td>${convidados[i].nome}</td> 
+            <td>${convidados[i].idade}</td> 
+            <td>${convidados[i].email}</td> 
+        </tr>`
     }
 
 }
