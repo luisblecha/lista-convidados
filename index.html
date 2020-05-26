@@ -2,39 +2,44 @@
 <html lang="pt-br">
 
 <head>
+    <link rel="stylesheet" href="estiloBootstrap.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Convidados</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
 </head>
 
 <body>
 
-    <h1 class="titulo text-center m-5" >Lista de Convidados</h1>
-  <section class="row justify-content-center">
-    <form class="card col col-10 col-sm-8 col-md-6 col-lg-3">
-        <div class="form-group">
-            <label for="nome">Nome</label>
-            <input id="nome" class="form-control" type="text" placeholder="Nome do convidado">
-        </div>
+    <h1 class="titulo text-center bg-secondary text-white m-0 p-2">Lista de Convidados</h1>
+    <div class="jumbotron big-banner jumbotron-fluid p-3 m-1">
+        <section class="row justify-content-center ">
+            <form class="card col col-10 col-sm-8 col-md-6 col-lg-3 bg-light">
+                <div class="form-group p-1">
+                    <label for="nome">Nome</label>
+                    <input id="nome" class="form-control" type="text" placeholder="Nome do convidado">
+                </div>
 
-        <div class="form-group">
-            <label for="idade">Idade</label>
-            <input id="idade" class="form-control" type="number" placeholder="Idade">
-        </div>
+                <div class="form-group p-1">
+                    <label for="idade">Idade</label>
+                    <input id="idade" class="form-control " type="number" placeholder="Idade">
+                </div>
 
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input id="email" class="form-control" type="email" placeholder="E-mail">
-        </div>
-        <button class="btn btn-primary mb-3" type="button" onclick="adicionar()">Adicionar</button>
-        <button class="btn btn-outline-danger mb-3" type="button" >Cancelar</button>
-    </form>
-  </section>
-    <section class="row justify-content-center mt-5">
-        <table class="table col col-10 col-sm-8 col-md-6" >
-            <thead>
+                <div class="form-group p-1">
+                    <label for="email">Email</label>
+                    <input id="email" class="form-control" type="email" placeholder="E-mail">
+                </div>
+                <button class="btn btn-outline-primary mb-3" type="button" onclick="adicionar()">Adicionar</button>
+                <button class="btn btn-outline-danger mb-3" type="button">Cancelar</button>
+            </form>
+
+        </section>
+    </div>
+    <section class="row justify-content-center">
+        <table class="table col col-10 col-sm-8 col-md-6 table-striped">
+            <thead class="thead-dark">
                 <th>Nome</th>
                 <th>Idade</th>
                 <th>Email</th>
@@ -52,7 +57,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
-        <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
