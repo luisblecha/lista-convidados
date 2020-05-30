@@ -14,6 +14,9 @@
 <body>
 
     <h1 class="titulo text-center bg-secondary text-white m-0 p-2">Lista de Convidados</h1>
+    
+    <section id="erros" class="row justify-content-center"></section>
+    
     <div class="jumbotron big-banner jumbotron-fluid p-3 m-1">
         <section class="row justify-content-center ">
             <form class="card col col-10 col-sm-8 col-md-6 col-lg-3 bg-light">
@@ -31,18 +34,19 @@
                     <label class="h6" for="email">Email</label>
                     <input id="email" class="form-control" type="email" placeholder="E-mail">
                 </div>
-                <button class="btn btn-outline-primary mb-3" type="button" onclick="adicionar()">Adicionar</button>
-                <button class="btn btn-outline-danger mb-3" type="button">Cancelar</button>
+                <button class="btn btn-outline-primary mb-3" type="button" onclick="salvar()">Salvar</button>
+                <button class="btn btn-outline-danger mb-3" type="button" onclick="limparFormulario()">Cancelar</button>
             </form>
 
         </section>
     </div>
-    <section class="row justify-content-center">
-        <table class="table col col-10 col-sm-8 col-md-6 table-striped">
+    <section class="row justify-content-center" >
+        <table class="table col col-10 col-sm-8 col-md-6  table-striped">
             <thead class="thead-dark">
                 <th>Nome</th>
                 <th>Idade</th>
                 <th>Email</th>
+                <th>Ações</th>
             </thead>
             <tbody id="lista"> </tbody>
         </table>
