@@ -1,5 +1,6 @@
 let convidados = [];
 let indiceEdicao = -1;
+let indiceRemocao = -1;
 let erros = [];
 
 function salvar() {
@@ -82,14 +83,18 @@ function atualizarLista() {
             <td>${convidados[i].email}</td> 
             <td>
                 <button class="btn btn-warning" onclick="editar(${i})">Editar</button>
-                <button class="btn btn-danger" onclick="remover(${i})">Remover</button>
+                <button class="btn btn-danger" data-toggle="modal" data-target="#alertaRemover" onclick="remover(${i})">Remover</button>
             </td>
         </tr>`;
   }
 }
 
 function remover(posicao) {
-  convidados.splice(posicao, 1);
+  indiceEdicao = posicao;
+}
+
+function confirmarRemocao(){
+  convidados.splice(indiceRemocao, 1);
   atualizarLista();
 }
 
